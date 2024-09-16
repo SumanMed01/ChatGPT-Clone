@@ -1,0 +1,1 @@
+console.log("Collaboration added successfully");
