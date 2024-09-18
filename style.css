@@ -5,8 +5,31 @@
 }
 
 html,body{
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    display: flex;
+}
+section{
+    background-color: red;
+    height: 100%;
+    width: 30%;
+}
+main{
+    
+    background-color: green;
+    width: 70%;
+    height: 100%;
+}
+main #conversation{
+    background-color: blue;
+    width: 100%;
+    height: 85%;
+
+}
+main #footer{
+    background-color:yellow;
+    width: 100%;
+    height: 15%;
 }
 
