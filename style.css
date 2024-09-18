@@ -28,7 +28,8 @@ main #conversation{
 
 }
 main #footer{
-    background-color:yellow;
+    background-color: whitesmoke;
+
     width: 100%;
     height: 15%;
 }
