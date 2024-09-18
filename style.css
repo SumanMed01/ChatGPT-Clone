@@ -10,6 +10,9 @@ html,body{
     overflow-x: hidden;
     display: flex;
 }
+
+
+
 section{
     background-color: red;
     height: 100%;
