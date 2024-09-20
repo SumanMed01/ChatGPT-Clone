@@ -469,3 +469,67 @@ main #footer {
   .input__search ::-webkit-scrollbar{
     display: none;
   }
+
+
+  /* First look of the session */
+  .communication-part #basic-view{
+    height: 100%;
+    width: 100%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .communication-part #basic-view #main-logo{
+    height: fit-content;
+    width: fit-content;
+    /* border: 2px solid #dad7cd; */
+    border-radius: 50%;
+    padding: 2%;
+    margin-bottom: 2vw;
+  }
+  .communication-part #basic-view #main-logo i{
+    font-size: 5vw;
+    color: #dad7cd
+  }
+
+  .communication-part #basic-view #cards{
+    height: fit-content;
+    width: fit-content;
+    /* background-color: red; */
+    display: flex;
+    column-gap: 2%;
+  }
+  .communication-part #basic-view #cards .card{
+    height: fit-content;
+    width: 20vw;
+    background-color: #132a13;
+    padding: 1vw;
+    border-radius: 10px;
+  }
+
+  .communication-part #basic-view #cards .card:hover{
+    scale: 1.06;
+    transition: all 0.3s linear;
+    cursor: pointer;
+  }
+
+  .communication-part #basic-view #cards .card i{
+    /* background-color: orange; */
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5vw;
+    border-radius: 50%;
+    border: 2px solid #dad7cd;
+    font-size: 1.3vw;
+    font-weight: 700;
+    color: #dad7cd;
+  }
+  .communication-part #basic-view #cards .card p{
+    margin-top: 1vw;
+    width: 60%;
+    font-family: romancio;
+    font-size: 1.5vw;
+    color: #dad7cd;
+  }
