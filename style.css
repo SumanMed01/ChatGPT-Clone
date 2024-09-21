@@ -1,35 +1,8 @@
-@font-face {
-    font-family: tm;
-    src: url(./Font/Acid\ TM.otf);
-}
-
-@font-face {
-    font-family: fontSpring;
-    src: url(./Font/Fontspring-DEMO-pinkcrestelle-semibold.otf);
-}
-
-@font-face {
-    font-family: hatsch;
-    src: url(./Font/Hatsch.ttf);
-}
-
-@font-face {
-    font-family: romancio;
-    src: url(./Font/Romancio.otf);
-}
-@font-face {
-    font-family: sans;
-    src: url(./Font/GeneralSans-Regular.otf);
-}
-@font-face {
-    font-family: apercu;
-    src: url(./Font/apercu-regular-pro.ttf);
-}
-
 * {
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 html,
@@ -39,32 +12,110 @@ body {
     overflow: hidden;
     display: flex;
 }
-section{
-    background-color:#171717;
+section {
+    background-color: #171717;
     height: 100%;
     width: 15.7%;
+    display: flex;
+    flex-direction: column;
 }
-section .top-section{
-    color:#B4B4B4;
+
+.top-section {
+    color: #B4B4B4;
     font-size: 26px;    
-    display: flex; /* Enable flexbox */  
-    align-items: center; /* Vertically center icons */  
-    justify-content: space-between; /* Distribute space evenly */  
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;  
     padding: 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+#history-section {  
+    flex-grow: 1; /* Allow the history section to grow and take available space */
+    padding: 20px;  
+    border-radius: 5px;  
+    overflow-y: auto;  /* Enable vertical scrolling */
+    max-height: calc(100% - 160px); /* Adjust height to fit within the section */
+}
+
+/* Webkit browsers (Chrome, Safari) */
+#history-section::-webkit-scrollbar {
+    width: 8px;  /* Width of the scrollbar */
+}
+
+#history-section::-webkit-scrollbar-track {
+    background: #171717;  /* Background of the scrollbar track */
+}
+
+#history-section::-webkit-scrollbar-thumb {
+    background-color: #888;  /* Color of the scrollbar thumb */
+    border-radius: 10px;  /* Rounded corners for the scrollbar thumb */
+    border: 2px solid #171717;  /* Border around the scrollbar thumb */
+}
+
+#history-section ul {
+    list-style: none;
+    font-size: 18px;
+    color: #ECECEC;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+#history-section ul li {
+    display: flex; 
+    align-items: center; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+#history-section ul li i {
+    margin-right: 8px; 
+    flex-shrink: 0; 
+}
+
+#history-section ul li span {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    display: inline-block; 
+    flex-grow: 1; 
+    position: relative;
+    font-size: 15px; 
+}
+
+#history-section ul li span::after {
+    content: ' '; 
+    padding-right: 10px; 
+}
+#bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    flex-shrink: 0;
+    height: 100px; /* Set height to 100% */
+    color: #ECECEC;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 10px;
     
 }
-section #history-section {  
-    width: 100%; /* Adjust width as needed */  
-    margin: 20px ; /* Center the section */  
-    padding: 20px; /* Add some padding around the section */  
-    border-radius: 5px; /* Optional rounded corners */  
-    overflow-y: auto; /* Enable vertical scrolling if needed */  
+#bottom-section span svg{
+   border:1.5px solid #888;
+   border-radius: 50%;
+   padding:3px
 }
-#history-section ul{
-    list-style: none;
-    font-size: 17px;
-    color: #ECECEC;
-}  
+#bottom-section p1{
+    font-size: 15px;
+
+}
+#bottom-section p2{
+    font-size: 12px;
+}
+
 main{
     background-color: #212121;
     width: 100%;
@@ -74,12 +125,11 @@ main #conversation{
     /*background-color: blue;*/
     width: 100%;
     /* background-color: white; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
   }
-  
+  #conversation #nav{
+    color: #ECECEC;
+  }
 
 main #footer{
    /* background-color:rgb(255, 179, 0);*/
