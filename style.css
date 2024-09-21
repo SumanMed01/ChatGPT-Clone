@@ -382,7 +382,7 @@ main #conversation .intro-part {
     align-items: center;
     justify-content: right;
     padding: 1% 3%;
-
+    overflow-x: hidden;
 }
 .communication-part .usersRequest p{
     background-color: #031626;
