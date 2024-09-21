@@ -254,16 +254,22 @@ main #conversation .intro-part {
     font-size: 1.7vw;
     font-weight: 900;
 }
-.intro-part #custom-dropdown #dropdown-page{
+.intro-part #custom-dropdown .dropdown-page{
     height: fit-content;
     width: 100%;
     /* background-color: blue; */
-    background-color: #031626;
-    color: #dad7cd;
+    background-color: #dad7cd;
+    color: #031626;
     border-radius: 7px;
+    /* display: none; */
+}
+/* .view{
+    display: block;
+} */
+.nonView{
     display: none;
 }
-.intro-part #custom-dropdown #dropdown-page .options{
+.intro-part #custom-dropdown .dropdown-page .options{
     display: flex;
     align-items: center;
     justify-content: left;
@@ -273,14 +279,14 @@ main #conversation .intro-part {
     cursor: pointer;
     border-radius: 7px;
 }
-.intro-part #custom-dropdown #dropdown-page .options:hover{
+.intro-part #custom-dropdown .dropdown-page .options:hover{
     background-color: black;
     color: white;
     scale: 1.02;
     transition: all 0.2s linear;
     border-radius: 7px;
 }
-.intro-part #custom-dropdown #dropdown-page .options i{
+.intro-part #custom-dropdown .dropdown-page .options i{
     /* background-color: yellow; */
     align-content: center;
     border: 2px solid #dad7cd;
@@ -290,19 +296,19 @@ main #conversation .intro-part {
     padding: 0.5vw;
     border-radius: 50%;
 }
-.intro-part #custom-dropdown #dropdown-page .options .description{
+.intro-part #custom-dropdown .dropdown-page .options .description{
     width: 60%;
 }
-.intro-part #custom-dropdown #dropdown-page .options .description h1{
+.intro-part #custom-dropdown .dropdown-page .options .description h1{
     /* background-color: yellow; */
     font-size: 2vw;
 }
-.intro-part #custom-dropdown #dropdown-page .options .description h3{
+.intro-part #custom-dropdown .dropdown-page .options .description h3{
     /* background-color: yellow; */
     font-size: 0.8vw;
 }
 
-.intro-part #custom-dropdown #dropdown-page .options .button
+.intro-part #custom-dropdown .dropdown-page .options .button
 {
     /* background-color: yellowgreen; */
     border: 2px solid white;
@@ -310,7 +316,7 @@ main #conversation .intro-part {
     border-radius: 30px;
     font-size: 1.5vw;
 }
-.intro-part #custom-dropdown #dropdown-page .options:nth-child(2) i:nth-child(3)
+.intro-part #custom-dropdown .dropdown-page .options:nth-child(2) i:nth-child(3)
 {
     /* background-color: pink; */
     margin-left: 2.5vw;
