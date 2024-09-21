@@ -491,7 +491,7 @@ main #footer {
   }
   .communication-part #basic-view #main-logo i{
     font-size: 5vw;
-    color: #dad7cd
+    color: black;
   }
 
   .communication-part #basic-view #cards{
@@ -504,7 +504,7 @@ main #footer {
   .communication-part #basic-view #cards .card{
     height: fit-content;
     width: 20vw;
-    background-color: #132a13;
+    background-color: black;
     padding: 1vw;
     border-radius: 10px;
   }
