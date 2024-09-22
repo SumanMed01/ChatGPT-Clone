@@ -38,13 +38,30 @@ body {
     width: 100vw;
     overflow: hidden;
     display: flex;
+    position: relative;
+}
+#sideBar{
+    /* height: 30vw; */
+    width: 2%;
+    position: fixed;
+    left: 1%;
+    top: 3%;
+    cursor: pointer;
+    z-index: 99;
 }
 
-section {
+.section {
     background-color: #049DD9;
     height: 100%;
     width: 20%;
 }
+
+.adjustSection{
+    width: 0%;
+}
+
+
+
 
 .section-top {
     /* border: 2px solid red; */
@@ -52,14 +69,18 @@ section {
     height: 10%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
     padding: 0% 2%;
 }
+.section-top #newChat{
+    height: 45%;
+}
 
-.section-top svg {
+
+.section-top svg  {
     padding: 4px;
     border-radius: 7px;
-    height: 45%;
+    height: 100%;
     /* color: ; */
     cursor: pointer;
 }
@@ -208,11 +229,14 @@ section {
 
 /* Section End Here */
 
-main {
+.main {
 
     background-color: #05C7F2;
     width: 80%;
     height: 100%;
+}
+.adjustMain{
+    width: 100%;
 }
 
 main #conversation {
@@ -241,6 +265,7 @@ main #conversation .intro-part {
     width: 30vw;
     /* background-color: pink; */
     margin-top: 2vw;
+    margin-left: 3vw;
 }
 
 .intro-part #custom-dropdown #dropdown{
@@ -488,7 +513,7 @@ main #footer {
 
 
   /* First look of the session */
-  .communication-part #basic-view{
+  .communication-part .basic-view{
     height: 100%;
     width: 100%;
     /* background-color: white; */
@@ -497,7 +522,7 @@ main #footer {
     align-items: center;
     justify-content: center;
   }
-  .communication-part #basic-view #main-logo{
+  .communication-part .basic-view #main-logo{
     height: fit-content;
     width: fit-content;
     /* border: 2px solid #dad7cd; */
@@ -505,19 +530,19 @@ main #footer {
     padding: 2%;
     margin-bottom: 2vw;
   }
-  .communication-part #basic-view #main-logo i{
+  .communication-part .basic-view #main-logo i{
     font-size: 5vw;
     color: black;
   }
 
-  .communication-part #basic-view #cards{
+  .communication-part .basic-view #cards{
     height: fit-content;
     width: fit-content;
     /* background-color: red; */
     display: flex;
     column-gap: 2%;
   }
-  .communication-part #basic-view #cards .card{
+  .communication-part .basic-view #cards .card{
     height: fit-content;
     width: 20vw;
     background-color: black;
@@ -525,13 +550,13 @@ main #footer {
     border-radius: 10px;
   }
 
-  .communication-part #basic-view #cards .card:hover{
+  .communication-part .basic-view #cards .card:hover{
     scale: 1.06;
     transition: all 0.3s linear;
     cursor: pointer;
   }
 
-  .communication-part #basic-view #cards .card i{
+  .communication-part .basic-view #cards .card i{
     /* background-color: orange; */
     height: fit-content;
     width: fit-content;
@@ -542,7 +567,7 @@ main #footer {
     font-weight: 700;
     color: #dad7cd;
   }
-  .communication-part #basic-view #cards .card p{
+  .communication-part .basic-view #cards .card p{
     margin-top: 1vw;
     width: 60%;
     font-family: romancio;

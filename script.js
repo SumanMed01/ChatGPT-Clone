@@ -14,6 +14,8 @@ let userInput = document.querySelector(".userInput");
 let sendBtn = document.querySelector(".sendBtn");
 let communicateDiv = document.querySelector(".communication-part");
 let historySection = document.querySelector(".section-middle");
+let newChat = document.querySelector("#newChat");
+
 
 // It will fetch the user input and then create a div that will store user prompt
 function userDivCreation(userData) {
@@ -41,6 +43,7 @@ function aiDivCreation(aiData) {
     communicateDiv.appendChild(aiDiv);
     // Make the input tag enable after the response was print in the screen so that the user can sent another response
     userInput.disabled = false;
+    newChat.style.pointerEvents = "auto";
 }
 
 function historyCreationDiv(userPrompt)
@@ -125,6 +128,7 @@ async function callOpenAI(userData) {
 sendBtn.addEventListener("click", () => {
     // Make it disabled so that user cant send req simultaneoulsy    
     userInput.disabled = true;
+    newChat.style.pointerEvents = "none";
     // This is fire when the user write some prompt in the input bar and then hit the send button
     userDivCreation(userInput.value);
 
@@ -135,18 +139,40 @@ sendBtn.addEventListener("click", () => {
 
 });
 
-let cards = document.querySelectorAll(".card p");
+let cards = document.querySelectorAll(".card");
+let view = document.querySelector(".basic-view");
 
 cards.forEach(function (card, index) {
     card.addEventListener('click', () => {
-        userInput.value = card.textContent
-        document.querySelector("#basic-view").style.display = "none";
+        
+        userInput.value = card.childNodes[3].textContent;
+        view.style.display = "none";
+        // view.classList.add("nonView");
     });
 });
 
 // This will remove the loading view when the send btn was clicked
-window.onload = function () {
-    userInput.addEventListener('click', () => {
-        document.querySelector("#basic-view").style.display = "none";
+userInput.addEventListener('click', () => {
+        view.style.display = "none";
     });
-};
+
+
+// response on clicking the new chat button
+newChat.addEventListener('click',()=>{
+    communicateDiv.innerHTML = "";
+    view.style.display = "flex";
+    communicateDiv.appendChild(view); 
+    userInput.value = "";
+})
+
+// response on clicking the Side Bar button
+let section = document.querySelector(".section")
+let main = document.querySelector(".main");
+let sideBar = document.querySelector("#sideBar");
+
+sideBar.addEventListener('click',()=>{
+    // section.style.width = `${0}`+'%';
+    // main.style.width = `${100}`+'%';
+    section.classList.toggle("adjustSection");
+    main.classList.toggle("adjustMain");
+})
