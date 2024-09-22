@@ -13,6 +13,7 @@ btn.addEventListener("click", () => {
 let userInput = document.querySelector(".userInput");
 let sendBtn = document.querySelector(".sendBtn");
 let communicateDiv = document.querySelector(".communication-part");
+let historySection = document.querySelector(".section-middle");
 
 // It will fetch the user input and then create a div that will store user prompt
 function userDivCreation(userData) {
@@ -42,7 +43,29 @@ function aiDivCreation(aiData) {
     userInput.disabled = false;
 }
 
-// JSON.stringify
+function historyCreationDiv(userPrompt)
+{
+    // Create all the div
+    let symbol = document.createElement("i");
+    let listing = document.createElement("div");
+    let para = document.createElement("p");
+    // Set the class name to all the div
+    symbol.className = "ri-draggable";
+    listing.className = "circle-dot";
+    para.textContent = userPrompt;
+    // Create the parent div
+    let historyParent = document.createElement("div");
+    // Set the class name
+    historyParent.className = "history";
+    // Now add the above class as the child class but make sure the order should be maintain
+    historyParent.appendChild(listing);
+    historyParent.appendChild(para);
+    historyParent.appendChild(symbol);
+    historySection.appendChild(historyParent);
+}
+
+// Create an array for history
+let historyArray = [];
 
 async function callOpenAI(userData) {
     const url = 'https://chatgpt-42.p.rapidapi.com/conversationgpt4-2';
@@ -70,11 +93,29 @@ async function callOpenAI(userData) {
     };
     // Remove the user prompt from the input value
     userInput.value = "";
-    try {
+    try 
+    {
         const response = await fetch(url, options);
         const final = await response.json();
         //   console.log(final.result);
         aiDivCreation(final.result);
+
+        // Store the user prompt in the history section
+
+        let historyData = {
+            requestData: userData,
+            responseData: final,
+        }
+
+        historyArray.push(historyData);
+        console.log(historyArray);
+
+        // Show the prompt of the user in the history by fetching the user prompt from the historyArray.
+        // historySection
+        let historyLength = historyArray.length;
+        let currHistory = historyArray[historyLength-1];
+        // Call the history div creation function
+        historyCreationDiv(currHistory.requestData);
     }
     catch (error) {
         console.error(error);
@@ -90,6 +131,8 @@ sendBtn.addEventListener("click", () => {
 
     // Now and API will fetch when whenever the api will return the data corresponds to the userData that data will be display in the ai div
     callOpenAI(userInput.value);
+
+
 });
 
 let cards = document.querySelectorAll(".card p");
