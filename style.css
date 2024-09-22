@@ -51,17 +51,19 @@ body {
 }
 
 .section {
-    background-color: #049DD9;
+    background-color: #202020;
     height: 100%;
     width: 20%;
+}
+
+body #sideBar:hover{
+   scale: 1.1;
+   transition: all 0.2s linear;
 }
 
 .adjustSection{
     width: 0%;
 }
-
-
-
 
 .section-top {
     /* border: 2px solid red; */
@@ -86,7 +88,8 @@ body {
 }
 
 .section-top svg:hover {
-    background-color: #05C7F2;
+    scale: 1.1;
+    transition: all 0.2s linear;
 }
 
 .section-middle {
@@ -131,15 +134,15 @@ body {
 .section-middle .history .circle-dot{
     height: 10px;
     width: 10px;
-    border: 5px solid black;
-    background-color: black;
+    border: 5px solid #eff6e0;
+    background-color: #eff6e0;
     border-radius: 50%;
     margin-left: 3%;
 }
 .section-middle .history p {
     height: 100%;
     width: 85%;
-    color: black;
+    color: #eff6e0;
     padding: 0.3vw;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -152,14 +155,14 @@ body {
 
 .section-middle .history:hover,
 .history i:hover {
-    background-color: #05C7F2;
+    background-color: #403d39;
     cursor: pointer;
 }
 
 .section-middle .history i {
     width: fit-content;
     height: 100%;
-    color: black;
+    color: #eff6e0;
     border-radius: 7px;
     /* border: 2px solid red; */
     display: flex;
@@ -182,9 +185,9 @@ body {
 
 .section-bottom i {
     height: fit-content;
-    color: black;
+    color: #eff6e0;
     margin-top: 2%;
-    border: 1px solid black;
+    border: 1px solid #eff6e0;
     padding: 2%;
     border-radius: 50%;
 }
@@ -206,7 +209,7 @@ body {
 }
 
 .section-bottom #upgrade h1:hover {
-    background-color: #05C7F2;
+    background-color: #403d39;
     cursor: pointer;
 }
 
@@ -216,13 +219,13 @@ body {
 }
 
 .section-bottom #upgrade h2:hover {
-    color: #582259;
+    color: blue;
     cursor: pointer;
 }
 
 .section-bottom #upgrade h1,
 #upgrade h2 {
-    color: black;
+    color: #eff6e0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
 }
@@ -231,7 +234,7 @@ body {
 
 .main {
 
-    background-color: #05C7F2;
+    background-color: #333533;
     width: 80%;
     height: 100%;
 }
@@ -240,7 +243,7 @@ body {
 }
 
 main #conversation {
-    background-color: #05C7F2;
+    background-color: #333533;
     width: 100%;
     height: 90%;
 }
@@ -264,15 +267,16 @@ main #conversation .intro-part {
     height: 40vh;
     width: 30vw;
     /* background-color: pink; */
-    margin-top: 2vw;
+    /* margin-top: 2vw; */
     margin-left: 3vw;
 }
 
 .intro-part #custom-dropdown #dropdown{
     height: fit-content;
     width: fit-content;
-    background-color: #031626;
-    color: #dad7cd;
+    background-color: #eb5e28;
+    color: #eff6e0;
+    font-weight: 900;
     display: flex;
     border-radius: 7px;
     cursor: pointer;
@@ -293,8 +297,8 @@ main #conversation .intro-part {
     height: fit-content;
     width: 100%;
     /* background-color: blue; */
-    background-color: #dad7cd;
-    color: #031626;
+    background-color: #eb5e28;
+    color: #eff6e0;
     border-radius: 7px;
     /* display: none; */
 }
@@ -358,7 +362,7 @@ main #conversation .intro-part {
 }
 .intro-part .profile-features{
     position: absolute;
-    top: 30%;
+    top: 10%;
     right: 2%;
     height: fit-content;
     width: fit-content;
@@ -366,14 +370,12 @@ main #conversation .intro-part {
     font-size: 2vw;
     font-weight: 900;
     border-radius: 50%;
-    background-color: #031626;
-    color: #dad7cd;
+    background-color: #eb5e28;
+    color: #eff6e0;
     cursor: pointer;
 }
 .intro-part .profile-features:hover{
-    background-color: black;
-    color: white;
-    scale: 1.02;
+    scale: 1.03;
     transition: all 0.2s ease-in-out;
 }
 
@@ -385,6 +387,7 @@ main #conversation .intro-part {
     /* border: 2px solid blue; */
     overflow: scroll;
     overflow-x: hidden;
+    padding-top: 1vw;
 }
 
 /* Designing the scrollbar */
@@ -420,12 +423,12 @@ main #conversation .intro-part {
     overflow-x: hidden;
 }
 .communication-part .usersRequest p{
-    background-color: #031626;
-    width: 60%;
+    background-color: #161a1d;
+    width: 45%;
     border-radius: 10px;
     padding: 1% 3%;
     font-family: apercu;
-    color: #dad7cd;
+    color: #eff6e0;
     font-size: 1vw;
     font-weight: 100;
     align-content: center;
@@ -441,19 +444,19 @@ main #conversation .intro-part {
 
 }
 .communication-part .aiResponse p{
-    background-color: #031626;
-    width: 60%;
+    background-color: #161a1d;
+    width: 45%;
     border-radius: 10px;
     padding: 1% 3%;
     font-family: apercu;
-    color: #dad7cd;
+    color: #eff6e0;
     font-size: 1vw;
     font-weight: 100;
     align-content: center;
 }
 /* user input section from where user can send req */
 main #footer {
-    background-color: #05C7F2;
+    background-color: #333533;
     /* border: 1px solid white; */
     width: 99%;
     height: 10%;
@@ -464,7 +467,7 @@ main #footer {
 /* From Uiverse.io by EddyBel */ 
 .input__container {
     position: relative;
-    background: #031626;
+    background: #161a1d;
     padding: 10px 15px;
     display: flex;
     justify-content: center;
@@ -532,7 +535,7 @@ main #footer {
   }
   .communication-part .basic-view #main-logo i{
     font-size: 5vw;
-    color: black;
+    color: #eb5e28;
   }
 
   .communication-part .basic-view #cards{
@@ -545,15 +548,16 @@ main #footer {
   .communication-part .basic-view #cards .card{
     height: fit-content;
     width: 20vw;
-    background-color: black;
+    background-color: #161A1D;
     padding: 1vw;
     border-radius: 10px;
   }
 
   .communication-part .basic-view #cards .card:hover{
     scale: 1.06;
-    transition: all 0.3s linear;
+    transition: all 0.1s linear;
     cursor: pointer;
+    border: 2px solid #eb5e28 ;
   }
 
   .communication-part .basic-view #cards .card i{
@@ -562,15 +566,15 @@ main #footer {
     width: fit-content;
     padding: 0.5vw;
     border-radius: 50%;
-    border: 2px solid #dad7cd;
+    border: 2px solid #eff6e0;
     font-size: 1.3vw;
     font-weight: 700;
-    color: #dad7cd;
+    color: #eff6e0;
   }
   .communication-part .basic-view #cards .card p{
     margin-top: 1vw;
     width: 60%;
     font-family: romancio;
     font-size: 1.5vw;
-    color: #dad7cd;
+    color: #eff6e0;
   }
