@@ -176,3 +176,26 @@ sideBar.addEventListener('click',()=>{
     section.classList.toggle("adjustSection");
     main.classList.toggle("adjustMain");
 })
+
+
+// media queries for 768px
+
+const tabletQuery = window.matchMedia('(max-width: 768px)');
+
+function handleTabletChange(event) {
+    // This will run when the tablet view will hit
+    let sideIcon = document.querySelector("#sideBar");
+    if (event.matches)
+    {
+        // write all the code here that come under 768px
+        sideIcon.addEventListener('click',()=>{
+            section.classList.toggle("fill-width");
+        })
+    } 
+  }
+
+handleTabletChange(tabletQuery);
+
+tabletQuery.addEventListener('change', handleTabletChange);
+
+
