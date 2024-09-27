@@ -199,6 +199,7 @@ handleTabletChange(tabletQuery);
 
 tabletQuery.addEventListener('change', handleTabletChange);
 
+// media queries for 1440px
 
 const smallLaptop = window.matchMedia('(max-width: 1440px)');
 
@@ -217,3 +218,22 @@ function handleTabletChange(event) {
 handleTabletChange(smallLaptop);
 
 smallLaptop.addEventListener('change', handleTabletChange);
+
+
+const mobile = window.matchMedia('(max-width: 1440px)');
+
+function handleTabletChange(event) {
+    // This will run when the tablet view will hit
+    let sideIcon = document.querySelector("#sideBar");
+    if (event.matches)
+    {
+        // write all the code here that come under 768px
+        sideIcon.addEventListener('click',()=>{
+            section.classList.toggle("fill-width");
+        })
+    } 
+  }
+
+handleTabletChange(mobile);
+
+mobile.addEventListener('change', handleTabletChange);

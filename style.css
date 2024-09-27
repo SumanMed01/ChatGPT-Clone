@@ -80,8 +80,6 @@ body #sideBar:hover{
 .section-top #newChat{
     height: 45%;
 }
-
-
 .section-top svg  {
     padding: 4px;
     border-radius: 7px;
@@ -648,14 +646,13 @@ main #footer {
         height: 90vh;
     }
     .intro-part{
-            width: 100%;
-    height: 20%;
-    /* border: 2px solid red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2%;
-    position: relative;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2%;
+        position: relative;
     }
     .intro-part #custom-dropdown{
         position: absolute;
@@ -804,4 +801,125 @@ main #footer {
       }
 }
 
-
+@media (max-width: 426px) {
+    #sideBar{
+        width: 7%;
+        top: -0.2%;
+        left: 0%;
+        transform: translate(50%,50%);
+    }
+    .section {
+        width: 0%;
+        position: absolute;
+        top: 0%;
+        left: -100%;
+        opacity: 0;
+    }
+    .fill-width{
+        width: 100%;
+        background-color: black;
+        left: 0%;
+        z-index: 97;
+        opacity: 100;
+        transition: all 0.3s linear;
+    }
+    .section-top #newChat{
+        margin-top: -5%;
+    }
+    .intro-part .profile-features {
+        font-size: 2vh;
+    }
+    .section-middle {
+        height: 80%;
+    }
+    .section-middle .history p {
+        font-size: 2.5vh;
+    }
+    .section-middle .history i {
+        font-size: 3vh
+    }
+    .section-bottom{
+        height: 10%;
+        border-top:none;
+    }
+    .section-bottom i {
+        margin-top: 0vh;
+    }
+    .section-bottom #upgrade h1 {
+        font-size: 3vh;
+    }
+    .section-bottom #upgrade h2 {
+        margin-left: 0.7vh;
+        font-size: 1.5vh;
+    }
+    .main {
+        width: 100%;
+    }
+    main #conversation {
+        background-color: #333533;
+        width: 100%;
+        height: 80%;
+    }
+    
+    main #conversation .intro-part {
+        height: 10%;
+    }
+    .intro-part #custom-dropdown #dropdown{
+        width: fit-content;
+        display: flex;
+    }
+    .intro-part #custom-dropdown{
+        width: 35vh;
+        position: absolute;
+        top: 14%;
+        left: 10%;
+        transform: translate(0%,0%);
+    }
+    .intro-part #custom-dropdown #dropdown h1{
+        font-size: 2.5vh;
+    }
+    .intro-part #custom-dropdown #dropdown i{
+        margin-top: 1vh;
+        font-size: 2.5vh;
+    }
+    .intro-part #custom-dropdown .dropdown-page .options i{
+        font-size: 140%;
+    }
+    .intro-part #custom-dropdown .dropdown-page .options .description h1{
+        font-size: 2vh;
+    }
+    .intro-part #custom-dropdown .dropdown-page .options .description h3{
+        font-size: 1.2vh;
+    }
+    .intro-part .profile-features{
+        top: 12%;
+    }
+    .communication-part {
+        width: 100%;
+        height: 90%;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding-top: 1vw;
+    }
+    .communication-part .usersRequest .paraContent{
+        font-size: 1.8vh;
+    }
+    .communication-part .aiResponse p{
+        font-size: 1.8vh;
+    }
+    .input__container {
+        padding: 5px 10px;
+        width: 95%;
+      }
+      .input__container i{
+        font-size: 2.5vh;
+        padding: 2%;
+      }
+      .input__search {
+        padding: 2px;
+        font-size: 1.6vh;
+      }
+      .input__search ::-webkit-scrollbar{
+        display: none;
+      }
+}
