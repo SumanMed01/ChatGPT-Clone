@@ -29,9 +29,9 @@
 * {
     margin: 0;
     border: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-*{
 html,body {
     height: 100vh;
     width: 100vw;
@@ -236,7 +236,6 @@ body #sideBar:hover{
 /* Section End Here */
 
 .main {
-
     background-color: #333533;
     width: 80%;
     height: 100%;
@@ -425,7 +424,7 @@ main #conversation .intro-part {
     padding: 1% 3%;
     overflow-x: hidden;
 }
-.communication-part .usersRequest p{
+.communication-part .usersRequest .paraContent{
     background-color: #161a1d;
     width: 45%;
     border-radius: 10px;
@@ -435,6 +434,7 @@ main #conversation .intro-part {
     font-size: 1vw;
     font-weight: 100;
     align-content: center;
+    overflow-wrap: break-word;
 }
 .communication-part .aiResponse{
     /* border: 5px solid red; */
@@ -583,12 +583,133 @@ main #footer {
   }
 
 
+  @media (max-width: 1440px) {
+    html,body {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        overflow-y: scroll;
+        display: flex;
+        position: relative;
+    }
+    #sideBar{
+        position: absolute;
+        width: 2.5%;
+        top: 3%;
+    }
+    .section {
+        width: 0%;
+        position: absolute;
+        top: 0%;
+        left: -100%;
+        opacity: 0;
+    }
+    .fill-width{
+        width: 100%;
+        background-color: black;
+        left: 0%;
+        z-index: 97;
+        opacity: 100;
+        transition: all 0.3s linear;
+    }
+    .section-middle {
+        height: 75%;
+    }
+    .section-middle .history p {
+        font-size: 2.5vh;
+    }
+    .section-middle .history i {
+        font-size: 3vh
+    }
+    .section-bottom{
+        height: 15%;
+        border-top: 1px solid whitesmoke;
+        padding: 0vh;
+        justify-content: top;
+    }
+    .section-bottom i {
+        margin-top: 2vh;
+        font-size: 2.5vh;
+        padding: 1vh;
+    }
+    .section-bottom #upgrade h1 {
+        font-size: 4vh;
+    }
+    .section-bottom #upgrade h2 {
+        margin-left: 1vh;
+        font-size: 3vh;
+    }
+    .main {
+        height: 100vh;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .main #conversation{
+        height: 90vh;
+    }
+    .intro-part{
+            width: 100%;
+    height: 20%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    position: relative;
+    }
+    .intro-part #custom-dropdown{
+        position: absolute;
+        top: 14%;
+        left: 5%;
+        transform: translate(0%,0%);
+    }
+    .intro-part #custom-dropdown #dropdown h1{
+        font-size: 2vh;
+    }
+    .intro-part #custom-dropdown .dropdown-page .options i{
+        font-size: 100%;
+    }
+    .intro-part #custom-dropdown .dropdown-page .options .description h1{
+        font-size: 2vw;
+    }
+    .intro-part #custom-dropdown .dropdown-page .options .description h3{
+        font-size: 1.2vw;
+    }
+    .intro-part .profile-features{
+        top: 12%;
+    }
+    .communication-part .usersRequest .paraContent{
+        font-size: 1.8vw;
+        overflow-wrap: break-word;
+    }
+    .communication-part .aiResponse p{
+        font-size: 1.8vw;
+    }
+      .input__container i{
+        font-size: 2.3vw;
+      }
+      .input__search {
+        font-size: 1.9vw;
+      }
+      .communication-part .basic-view #main-logo i{
+        font-size: 8vw;
+      }
+      .communication-part .basic-view #cards .card{
+        width: 25vw;
+      }
+      .communication-part .basic-view #cards .card i{
+        font-size: 1.8vw;
+      }
+      .communication-part .basic-view #cards .card p{
+        font-size: 2vw;
+      }
+      
 }
 
 @media (max-width: 768px) {
     #sideBar{
-        width: 3%;
-        top: 3.3%;
+        width: 2.5%;
+        top: 3%;
     }
     .section {
         width: 0%;
@@ -656,8 +777,9 @@ main #footer {
     .intro-part .profile-features{
         top: 12%;
     }
-    .communication-part .usersRequest p{
+    .communication-part .usersRequest .paraContent{
         font-size: 1.8vw;
+        overflow-wrap: break-word;
     }
     .communication-part .aiResponse p{
         font-size: 1.8vw;

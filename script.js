@@ -21,6 +21,7 @@ let newChat = document.querySelector("#newChat");
 function userDivCreation(userData) {
     // Creating the paragraph element
     let para = document.createElement("p");
+    para.className = "paraContent";
     // Insert the userInput
     para.textContent = userData;
     // Creating the div element
@@ -199,3 +200,20 @@ handleTabletChange(tabletQuery);
 tabletQuery.addEventListener('change', handleTabletChange);
 
 
+const smallLaptop = window.matchMedia('(max-width: 1440px)');
+
+function handleTabletChange(event) {
+    // This will run when the tablet view will hit
+    let sideIcon = document.querySelector("#sideBar");
+    if (event.matches)
+    {
+        // write all the code here that come under 768px
+        sideIcon.addEventListener('click',()=>{
+            section.classList.toggle("fill-width");
+        })
+    } 
+  }
+
+handleTabletChange(smallLaptop);
+
+smallLaptop.addEventListener('change', handleTabletChange);
