@@ -219,6 +219,7 @@ handleTabletChange(smallLaptop);
 
 smallLaptop.addEventListener('change', handleTabletChange);
 
+// media queries for all size mobile
 
 const mobile = window.matchMedia('(max-width: 1440px)');
 
